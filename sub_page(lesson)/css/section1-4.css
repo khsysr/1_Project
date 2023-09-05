@@ -1,0 +1,348 @@
+/* 중복 */
+section{
+  width: 1080px;
+  margin: auto;
+}
+
+
+/**************** 섹션01 sub_info ****************/
+/********************************
+.section_01.sub_info
+  .info_text
+    .post_heading
+      span.tag
+      .title_box
+        h3.title
+        i.share_btn
+    .recruit_member
+      i
+      span
+    .desc
+      .para (*4)
+        i
+          img
+        strong
+        span
+  .info_visual
+    img
+********************************/
+.section_01 {
+  height: 450px;
+  display: flex;
+  justify-content: space-between;
+  padding: 3.38rem 0;
+}
+
+/* info_text */
+.info_text{
+  width: 50%;
+}
+.info_text .post_heading{}
+.info_text .post_heading .tag{
+  display: inline-block;
+  padding: 0.375rem 0.63rem;
+  border-radius: 5px;
+}
+.tag.available{ /* 모집 중 */
+  color: var(--point_color);
+  border: 1px solid var(--point_color);
+  
+}
+.tag.end{ /* 신청 마감 */
+  color: var(--orange_color);
+  border: 1px solid var(--orange_color);
+}
+
+.info_text .post_heading .title_box{
+  display: flex;
+  align-items: center;
+  margin: 1rem 0 2rem;
+}
+.title_box .title{
+  font-size: var(--title_size2);
+}
+.title_box .share_btn{
+  width: 35px;
+  height: 35px;
+  margin-left: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  background: url(../img/btn_share.svg) no-repeat;
+  background-position: center;
+  transition: .3s;
+}
+.title_box .share_btn:hover{
+  border: 1px solid var(--point_color);
+  background: url(../img/btn_share_hover.svg) no-repeat;
+  background-position: center;
+  background-color: var(--point_color);
+}
+
+/* recruit_member */
+.recruit_member{
+  width: 40%;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  color: #ccc;
+  border: 1px solid #ccc;
+  border-radius: 10px;  
+}
+.recruit_member i{
+  width: 22px;
+  height: 22px;
+  margin: 0.5rem 0;
+  padding: 0.75rem 1.5rem 0.75rem 1.25rem;
+  background: url(../img/recruit.svg) no-repeat;
+  background-position: center;
+}
+.recruit_member span{}
+
+/* desc */
+.sub_info .desc{}
+.sub_info .desc .para{
+  margin-bottom:  0.8rem;
+  display: flex;
+  align-items: center;
+}
+.sub_info .desc .para i{
+  width: 22px;
+  height: 22px;
+  margin-right: 0.25rem;
+  display: inline-block;
+  border-radius: 50%;
+  text-align: center;
+  background-color: var(--point_color);
+}
+.sub_info .desc .para i img{
+  margin-top: 3px;
+}
+.sub_info .desc .para strong{
+  width: 18%;
+  display: inline-block;
+  font-weight: 700;
+}
+.sub_info .desc .para span{}
+
+/* info_visual */
+.info_visual{
+  width: 50%;
+  border-radius: 1.88rem;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.info_visual img{
+  width: 130%;
+  position: absolute;
+  top: 0;
+  left: -8%;
+}
+
+
+
+/********************* 섹션02 *********************/
+/********************************
+.section_02
+  .lesson_term
+    .term1
+      .term_text
+        span
+        p
+      i.illust
+    .term2
+      .term_text
+        span
+        p
+      i.illust
+    .term3
+      .term_text
+        span
+        p
+      i.illust
+********************************/
+.section_02{
+  height: 120px;
+  border-radius: 1.88rem;
+  background-color: #DAF5D9;
+}
+
+.lesson_term{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 3.75rem;
+  overflow: hidden;
+}
+.lesson_term > div{
+  width: 30%;
+  position: relative;
+}
+.lesson_term .term_text{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.lesson_term .term_text span{
+  font-size: var(--base_size);
+  font-weight: 700;
+}
+.lesson_term .term_text p{
+  margin-top: 0.63rem;
+}
+
+.illust{
+  opacity: 0.5;
+  position: absolute;
+}
+.term1 .illust{
+  width: 205px;
+  height: 183px;
+  top: -60px;
+  left: -20%;
+  transform: rotate(8deg);
+  background: url(../img/term_illust1_due.svg) no-repeat;
+  background-size: contain;
+}
+.term2 .illust{
+  width: 46px;
+  height: 42px;
+  top: -36px;
+  left: -20%;
+  transform: rotate(-9deg);
+  background: url(../img/term_illust2_apply.svg) no-repeat;
+  background-size: contain;
+}
+.term3 .illust{
+  width: 348px;
+  height: 93px;
+  top: 50%;
+  right: -25%;
+  transform: translateY(-50%);
+  background: url(../img/term_illust3_edu.svg) no-repeat;
+  background-size: contain;
+}
+
+
+
+/********************* 섹션03 *********************/
+/********************************
+.section_03
+  .lesson_content
+    ul
+      li (*3)
+        img
+        .text_box
+          span
+          p
+********************************/
+.section_03{
+  padding: 3.5rem 0 6.5rem;
+}
+
+.lesson_content{}
+.lesson_content ul{
+  display: flex;
+  justify-content: space-between;
+}
+.lesson_content ul li{
+  width: 31.5%;
+  height: 400px;
+  border-radius: 1.88rem;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+  overflow: hidden;
+}
+.lesson_content ul li img{
+  width: 95%;
+}
+.lesson_content ul li:nth-child(2) img{
+  width: 80%;
+}
+/* lesson1.html 이미지 크기 조정 */
+#sing{
+  width: 70%;
+}
+
+.lesson_content ul li .text_box{
+  width: 100%;
+  height: 100px;
+  padding-top: 1.25rem;
+  color: #fff;
+  text-align: center;
+}
+.lesson_content ul li:nth-child(1) .text_box{background-color: var(--point_color);}
+.lesson_content ul li:nth-child(2) .text_box{background-color: var(--orange_color);}
+.lesson_content ul li:nth-child(3) .text_box{background-color: var(--blue_color);}
+
+.lesson_content ul li .text_box span{
+  font-size: var(--base_size);
+  font-weight: 500;
+}
+.lesson_content ul li .text_box p{
+  margin-top: 0.5rem;
+  font-size: var(--title_size);
+  font-weight: 700;
+}
+
+
+
+/**************** 섹션04 pagination ****************/
+/********************************
+.section_04
+  .pagination
+    ul
+      li
+        a.prev
+      li
+        a.list
+      li
+        a.next
+********************************/
+.section_04{}
+
+.pagination{}
+.pagination ul{
+  display: flex;
+  gap: 1.25rem;
+  justify-content: center;
+  align-items: center;
+}
+.pagination ul li{}
+.pagination ul li a{
+  display: block;
+  border-radius: 5px;
+}
+.pagination ul li a.prev,
+.pagination ul li a.next{
+  padding: 0.88rem 1.13rem;
+  border: 1px solid #ccc;
+  transition: .3s;
+}
+.pagination ul li a.list{
+  padding: 0.88rem 1.88rem;
+  color: #fff;
+  background-color: var(--point_color);
+  transition: .3s;
+}
+
+.prev.none{
+  display: none;
+}
+
+/* pagination 호버 */
+.pagination ul li a.prev:hover,
+.pagination ul li a.next:hover{
+  color: var(--point_color);
+  border: 1px solid var(--point_color);
+}
+.pagination ul li a.list:hover{
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+}

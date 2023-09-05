@@ -1,0 +1,186 @@
+.wrap {
+  height: 1900px;
+}
+
+/************************
+.lesson_site
+  .lesson_heading (강좌 안내)
+    h2
+  .lesson_inner
+    ul (자치회관 하위 메뉴 리스트)
+      li (자치회관 소개)
+        .menu
+          a
+          i.down_btn
+        ul.depth2
+          li > a (*n)
+      li (주민자치회)
+        .menu
+          a
+          i.down_btn
+        ul.depth2
+          li > a (*n)
+      li (자치회관 소식)
+        .menu
+          a
+          i.down_btn
+        ul.depth2
+          li > a (*n)
+      li.focus (자치회관 프로그램 //열람하는 메뉴에 클래스명 'focus')
+        .menu
+          a
+          i.down_btn
+        ul.depth2
+          li > a (*n)
+  .lesson_text
+    p (*5)
+************************/
+.lesson_site {
+  width: 100%;
+}
+
+.lesson_site .lesson_heading {
+  width: 100%;
+  height: 250px;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.6) 6.85%,
+    rgba(0, 0, 0, 0) 77.46%
+  ),
+  url(../img/lesson_banner.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 3.75rem 0 0 0;
+  position: relative;
+  backdrop-filter: blur(20px);
+}
+
+.lesson_site h2 {
+  position: absolute;
+  top: 9rem;
+  left: 94px;
+  color: white;
+  font-size: var(--sub_visual_title_size);
+  font-weight: 800;
+  z-index: 1;
+}
+
+.lesson_site .lesson_heading h2:after {
+  content: "";
+  width: 100%;
+  height: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: var(--point_color);
+  border-radius: 5px;
+  z-index: -1;
+}
+
+/************ lesson_inner ************/
+.lesson_inner {
+  height: 50px;
+}
+.lesson_inner ul {
+  display: flex;
+  height: 100%;
+  background: var(--point_color);
+  justify-content: center;
+}
+.lesson_inner ul > li {
+  height: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  position: relative;
+  transition: .3s;
+}
+.lesson_inner ul > li > a{
+  height: 100%;
+  padding: 0.85rem 1rem 0.85rem 1.5rem;
+  font-size: var(--base_size);
+  font-weight: 700;
+  color: white;
+}
+.down_btn{
+  height: 100%;
+  padding: 0.85rem 1.5rem;
+  margin-left: 0.5rem;
+  background: url(../img/menu_icon_arrow_down.svg) no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+/* lesson_inner 호버 */
+.lesson_inner ul > li:nth-child(1):hover,
+.lesson_inner ul > li:nth-child(2):hover,
+.lesson_inner ul > li:nth-child(3):hover{
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+/* lesson_inner 자치회관 프로그램 메뉴 */
+.lesson_inner .focus {
+  background-color: #fff;
+}
+.lesson_inner .focus a {
+  color: var(--point_color);
+}
+.focus .down_btn {
+  background: url(../img/menu_icon_arrow_down_focus.svg) no-repeat;
+  background-position: center;
+}
+
+/* lesson_inner 하위 메뉴 */
+.lesson_inner ul li .depth2{
+  width: 100%;
+  height: fit-content;
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border-top: 1px solid var(--point_color);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  transition: .5s;
+  z-index: 100;
+}
+.lesson_inner ul li .depth2 li{
+  width: 100%;
+  padding: 0;
+  text-align: center;
+}
+.lesson_inner ul li .depth2 > li > a{
+  width: 100%;
+  display: block;
+  padding: 1rem 0;
+  color: var(--point_color);
+  background-color: #fff;
+  font-size: var(--base_size);
+  font-weight: 700;
+  transition: .3s;
+}
+.lesson_inner ul li .depth2 > li > a:hover{
+  background-color: rgba(129, 220, 127, 0.2);
+}
+
+/* open */
+.lesson_inner ul li .depth2.open{
+  height: fit-content;
+  opacity: 1;
+  display: flex;
+}
+
+/************ lesson_text ************/
+.lesson_text {
+  display: flex;
+  border-bottom: 1px solid rgba(221, 221, 221, 0.8);
+  height: 60px;
+}
+.lesson_text p {
+  padding: 0 0.5rem;
+  height: 30px;
+  color: #b3b3b3;
+  margin-top: 20px;
+}

@@ -1,0 +1,129 @@
+/************** 섹션03 section_03 **************/
+.section_03 {
+  width: 1300px;
+  height: 425px;
+}
+.section_inner {
+  display: flex;
+  justify-content: space-between;
+  padding: 36px;
+}
+
+.bbs{
+  width: 584px;
+  border: 1px solid #ddd;
+  padding: 40px;
+  border-radius: 35px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
+}
+.ourdong-news{
+  margin-right: 60px;
+}
+
+.news_header,
+.notice_header{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 35px;
+}
+.section_03 h3 {
+  font-size: 24px;
+  font-weight: bold;
+}
+.section_03 span {
+  font-size: 1rem;
+}
+
+/* 섹션03 소식, 공지사항 더보기 버튼 */
+.news_header > a,
+.notice_header > a{
+  width: 80px;
+  border-radius: 20px;
+  line-height: 30px;
+  text-align: center;
+  transition: 0.3s;
+}
+.news_header > a:hover,
+.notice_header > a:hover{
+  color: white;
+  background-color: #81DC7F;
+}
+
+/* 섹션03 소식, 공지사항 ul li.content */
+.content{
+  display: flex;
+  justify-content: space-between;
+  line-height: 2;
+}
+.content a{
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  transition: 0.4s;
+}
+.content a:before{
+  content: '';
+  width:0%;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  border-radius: 2px;
+  background-color: #81DC7F;
+  transition: 0.5s;
+}
+.content a:hover {
+  color: #81DC7F;
+}
+.content a:hover:before{
+  width: 100%;
+}
+
+
+/* -- -- -- -- -- 섹션04 주요기관 안내 section 4 -- -- -- -- -- */
+.section_04 {
+  width: inherit;
+  height: 597px;
+}
+
+.section_04 .header {
+  text-align: center;
+}
+
+.section_04 .header h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 100px;
+}
+
+.section_04 .swiper-wrapper {
+  margin-top: 70px;
+  width: 1300px;
+  height: 309px;
+
+}
+
+.section_04 .swiper-slide {
+  width: 300px;
+  display: grid;
+  grid-template-columns: 1, 1;
+  justify-content: center;
+  text-align: center;
+  transition: 0.4s;
+}
+.section_04 .swiper-slide:hover{
+  transform: scale(1.2);
+}
+.swiper-button-prev1{}
+.swiper-button-next{}
+
+
+.section_04 .swiper-slide img {
+  display: block;
+}
+
+/* 섹션4 슬라이드 버튼 */
+.other_btn{
+  top: 140px;
+  width: 30px;
+}

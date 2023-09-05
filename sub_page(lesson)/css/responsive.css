@@ -1,0 +1,480 @@
+@media (max-width: 768px) {
+  /************** 전체 영역 **************/
+  body{}
+  .wrap {
+    height: 100%;
+    flex-direction: column;
+  }
+
+  /************** 중복 스타일 **************/
+  .wrap, .nav_inner, .main_inner, .footer_inner, /* 이너 */
+  .nav_box, .Lnav_inner .Lnav2, .Lnav3.open .main_menu, .sub_menu,/* .nav_inner 영역 */
+  section, .lesson_inner,
+  .section_01, /* 섹션01 영역 */
+  .section_02, /* 섹션02 영역 */
+  .section_03, /* 섹션03 영역 */
+  .section_04, /* 섹션04 영역 */
+  footer/* 푸터 영역 */ {
+    width: 100%;
+  }
+
+  /************** nav 시작 **************/
+  .nav_inner {
+    height: 80px;
+    position: fixed;
+    z-index: 100;
+  }
+
+  /* 네비 박스 */
+  .nav_box {
+    height: 100%;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+    position: relative;
+    background-color: var(--point_color);
+  }
+
+  /* 네비 이너 */
+  .Lnav_inner {
+    height: 100%;
+  }
+
+  /* 로고 */
+  .Lnav_inner .Lnav1 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+  }
+  .Lnav_inner .Lnav1 a {
+    width: 156px;
+    height: 40px;
+    background-image: url(../img/주민센터_로고_white.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  .Lnav_inner .Lnav1 a img {
+    /* filter: grayscale(100%) brightness(100); */
+    display: none;
+  }
+
+  /* 모바일 햄버거 메뉴 .trigger */
+  .trigger {
+    display: block;
+  }
+
+  /* 로그인/검색 */
+  .Lnav_inner .Lnav2 {
+    display: none;
+  }
+  .Lnav2.open {
+    display: flex;
+    height: 100px;
+    justify-content: center;
+    padding: 0;
+    background-color: #ddd;
+  }
+
+  /* 메뉴바 */
+  .Lnav_inner .Lnav3 {
+    display: none;
+  }
+  .Lnav3.open {
+    height: 100vh;
+    display: block;
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.25);
+  }
+  .Lnav3.open .main_menu {
+    height: fit-content;
+    position: relative;
+    text-align: left;
+  }
+  .Lnav3.open .main_menu:after {
+    /* 드롭다운 기호 추가 */
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 20px;
+    right: 1.5rem;
+    background: url(../img/arrow-down.svg) no-repeat center;
+    background-size: cover;
+    transform: rotate(90deg);
+    opacity: 0.2;
+    transition: 0.1s;
+  }
+
+  .Lnav3.open .main_menu > a {
+    padding-left: 2rem;
+    position: relative;
+  }
+  .Lnav3.open .main_menu > a:before {
+    /* 호버 시_메인메뉴 그림자 구현 용도 */
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    opacity: 0;
+    z-index: 500;
+    transition: 0.3s;
+  }
+
+  .Lnav_inner .Lnav3 > ul > li:hover {
+    background-color: inherit;
+  }
+  .Lnav_inner .Lnav3 > ul > li:hover > a {
+    background-color: #d3eed2;
+  }
+  .Lnav_inner .Lnav3 > ul > li:hover > a:before {
+    opacity: 1;
+  }
+  .Lnav_inner .Lnav3 > ul > li:hover::after {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+
+  /* 메인_서브메뉴 .sub_menu */
+  .sub_menu {
+    height: fit-content;
+    position: relative;
+    top: 0;
+    left: 0;
+    border-radius: 0;
+    background-color: inherit;
+  }
+  .sub_menu::after {
+    /* 타 메인메뉴와 구분하기 위한 구분선 추가 */
+    content: "";
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    bottom: 1px;
+    background-color: #ddd;
+  }
+  .sub_menu a {
+    padding-left: 3rem;
+    text-align: left;
+    font-size: 0.938rem;
+  }
+  .sub_menu a:hover {
+    background-color: rgba(211, 238, 210, 0.8);
+  }
+
+  /* 주민센터 이용시간 */
+  .Lnav_inner .Lnav4 {
+    display: none;
+  }
+
+  /* 오른쪽 Rnav */
+  .main_right {
+    display: none;
+  }
+  .main_right_news {
+  }
+
+  /************** main_inner 시작 **************/
+  .main_inner {
+    margin-top: 80px;
+  }
+  /****** 메인헤더 *****/
+  .main_inner .main_header {
+    display: none;
+  }
+
+  
+  /************** lesson 시작 ****************/
+  /* lesson_site */
+  .lesson_site .lesson_heading {
+    height: 130px;
+    border-radius: 0;
+  }
+  .lesson_site h2 {
+    top: 60px;
+    left: 30px;
+    font-size: var(--title_size2);
+    font-weight: 800;
+  }
+  .lesson_site .lesson_heading h2:after {
+    height: 5px;
+    bottom: -1px;
+  }
+
+  /***************** lesson_inner ****************/
+  .lesson_inner{
+    height: 100px;
+  }
+
+  .lesson_inner ul {
+    height: 100%;
+    flex-wrap: wrap;
+  }
+  .lesson_inner ul > li {
+    width: 50%; 
+    height: 50px;
+    justify-content: space-between;
+  }
+  .lesson_inner ul > li:nth-child(2n+1){
+    border-right: 1px solid #fff;
+  }
+  .lesson_inner ul > li:nth-child(1),
+  .lesson_inner ul > li:nth-child(2){
+    border-bottom: 1px solid #fff;
+  }
+
+  .lesson_inner ul > li > a{
+    padding: 1rem;
+    font-weight: 700;
+    white-space: nowrap;
+    color: white;
+  }
+  .down_btn{}
+  
+  .lesson_inner ul li .depth2.open > li > a{
+    font-size: 1rem;
+  }
+
+  /**************** lesson_text ****************/
+  .lesson_text {
+    height: 50px;
+  }
+  .lesson_text p{
+    margin-top: 1rem;
+  }
+
+  /***************** 섹션01 강좌 인포 ****************/
+  .section_01 {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 0;
+  }
+  
+  /* info_text */
+  .info_text{
+    width: 100%;
+    margin-bottom: 0;
+  }
+  
+  .post_heading{
+    padding: 0 1rem;
+  }
+  
+  /* recruit_member */
+  .recruit_member{
+    width: 50%;
+    margin: 2rem 1rem;
+  }
+  
+  /* desc */
+  .sub_info .desc{
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    margin: 0 1rem;
+    padding: 1rem 0 0 0.5rem;
+  }
+  .sub_info .desc .para strong{
+    width: 25%;
+  }
+  
+  /* info_visual */
+  .info_visual{
+    width: 100%;
+    height: 250px;
+    border-radius: 0;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+
+  /***************** 섹션02 수업시간, 교육 기간 ****************/
+  .section_02{
+    margin: 1.88rem 0 2.5rem;
+    height: 330px;
+    border-radius: 0;
+    background-color: transparent;
+  }
+  .lesson_term{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+  .lesson_term > div{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 0 3.5rem;    
+  }
+  .term1,
+  .term3{
+    border-radius: 1.88rem 0 0 1.88rem;
+    margin-left: 2rem;
+  }
+  .term2{
+    border-radius: 0 1.88rem 1.88rem 0;
+    margin-right: 2rem;
+  }
+  .term1{background-color: #DAF5D9;}
+  .term2{background-color: #FBDBBD;}
+  .term3{background-color: #C0E3FD;}
+  
+  .lesson_term .term_text{
+    position: static;
+    transform: translateY(0);
+  }
+  .lesson_term .term1 .term_text,
+  .lesson_term .term3 .term_text{
+    margin-left: 2rem;
+  }
+  
+  .illust{
+    opacity: 1;
+  }
+  .term1 .illust{
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    left: 5%;
+    transform: rotate(0) translateY(-50%);
+    background: url(../img/m_term_illust1.svg) no-repeat;
+  }
+  .term2 .illust{
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    left: 84%;
+    transform: rotate(0) translateY(-50%);
+    background: url(../img/m_term_illust2.svg) no-repeat;
+  }
+  .term3 .illust{
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    left: 5%;
+    background: url(../img/m_term_illust3.svg) no-repeat;
+  }
+
+  /***************** 섹션03 강좌소개, 신청방식, 문의전화 ****************/
+  .section_03{
+    padding: 1rem 0;
+  }
+  .lesson_content ul{
+    align-items: center;
+    flex-direction: column;
+    gap: 0;
+  }
+  .lesson_content ul li{
+    width: 100%;
+    height: 200px;
+    flex-direction: row;
+    border-radius: 0;
+    position: relative;
+    box-shadow: none;
+  }
+
+  .lesson_content ul li img{
+    margin: 0.5rem 1.5rem;
+  } 
+  .lesson_content ul li:nth-child(1) img, #sing{
+    width: 35%;
+  }
+  .lesson_content ul li:nth-child(2) img{
+    width: 60%;
+    margin: 4.5rem 0.5rem 0 0;
+  }
+  .lesson_content ul li:nth-child(3) img{
+    width: 40%;
+    margin: 0.5rem 3rem;
+  }
+
+  .lesson_content ul li .text_box{
+    width: 100%;
+    height: 100%;
+    padding: 4.2rem 0 0 1.5rem;
+    text-align: left;
+    background-color: transparent;
+    position: absolute;
+    z-index: -1;
+  }
+  .lesson_content ul li:nth-child(1) .text_box{
+    background: linear-gradient(
+      90deg,
+      rgba(129, 220, 127, 1) 50%,
+      rgba(255, 255, 255, 0) 120%
+    );
+  }
+  .lesson_content ul li:nth-child(2) .text_box{
+    background: linear-gradient(
+      90deg,
+      rgba(246, 165, 90, 1) 15%,
+      rgba(255, 255, 255, 0) 120%
+    );
+  }
+  .lesson_content ul li:nth-child(3) .text_box{
+    background: linear-gradient(
+      90deg,
+      rgba(98, 186, 249, 1) 30%,
+      rgba(255, 255, 255, 0) 120%
+    );
+  }
+
+
+
+  /**************** 섹션04 페이지네이션 ****************/
+  .section_04{
+    height: fit-content;
+    margin: 5rem auto 10rem;
+  }
+  .pagination ul{
+    gap: 1rem;
+  }
+
+  
+  /**************** 푸터 ****************/
+  footer {
+    height: fit-content;
+  }
+  .footer_inner {
+    height: 100%;
+    padding: 2rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer_left {
+    width: 100%;
+  }
+  .footer_left img {
+    width: 40%;
+  }
+  .footer_right .sns-icon {
+    display: none;
+  }
+  .footer_right .multySite {
+    flex-wrap: wrap;
+    margin: 2rem 0 1rem;
+  }
+  .footer_right .multySite li {
+    margin: 0 1.875rem 0.5rem 0;
+  }
+  .footer_right .multySite li a {
+    display: block;
+    padding: 0.5rem 0;
+    font-size: 0.875rem;
+  }
+  .footer_right p {
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+  }
+
+  /* footer 좌/우 이미지 */
+  .footer_img01,
+  .footer_img02 {
+    display: none;
+  }
+}

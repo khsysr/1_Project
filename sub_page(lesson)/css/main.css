@@ -1,0 +1,175 @@
+/************************
+.main
+  .main_inner
+    .swiper.main_visual
+      .swiper-wrapper
+        .main_slide.slide01
+          .info
+            <h2>
+            .desc
+              <p>
+                <strong>
+              <p>
+                <strong>
+              <p>
+                <strong>
+            .btn.mainBtn
+        .main_slide.slide02
+          ~~~~~ .slide01과 동일
+          .main_slide.slide03
+          ~~~~~ .slide01과 동일
+      .swiper-pagination
+************************/
+
+.main {}
+.main_inner {}
+
+.main_visual,
+.swiper-wrapper,
+.main_slide {
+  width: 1300px;
+  height: 650px;
+}
+
+.main_visual {
+  position: relative;
+  border-radius: 60px 0 0 0;
+}
+.swiper-wrapper {}
+
+.main_slide {
+  background-size: cover;
+  background-position: center;
+}
+.slide01 {
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0) 40%
+    ),
+    url(../img/mainSlide01.png);
+}
+.slide02 {
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0) 40%
+    ),
+    url(../img/1.jpg);
+}
+.slide03 {
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0) 40%
+    ),
+    url(../img/mainSlide03.png);
+}
+
+.main_slide .info {
+  position: absolute;
+  top: 215px;
+  left: 100px;
+  color: #fff;
+  width: 1200px;
+  font-size: 1.2rem;
+}
+.main_slide .info h2 {
+  width: fit-content;
+  position: relative;
+  font-size: 3.25rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+.main_slide .info h2:after {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  z-index: -1;
+  content: "";
+  width: 100%;
+  height: 10px;
+  background-color: var(--point_color);
+  border-radius: 5px;
+}
+
+/* .main_slide .info .desc */
+.main_slide .info .desc {
+  width: 650px;
+  height: 125px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 30px;
+  margin: 3rem 0;
+}
+.main_slide .info .desc p {
+  width: 400px;
+}
+.swiper-slide.main_slide.swiper-slide-active .info .desc p > strong {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.main_slide .info .btn_main {
+  width: 170px;
+  height: 40px;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  transition: 0.3s;
+}
+.main_slide .info .btn_main:hover {
+  border: 1px solid var(--point_color);
+  background-color: var(--point_color);
+}
+
+/* 메인비주얼 페이지네이션 커스텀 */
+.paging_btn_main {
+  height: fit-content;
+}
+.paging_btn_main > .swiper-pagination-bullet {
+  border: 1px solid #fff;
+  opacity: 1;
+  background: transparent;
+}
+.paging_btn_main > .swiper-pagination-bullet-active {
+  background-color: #fff;
+}
+.paging_btn_main > .swiper-pagination-bullet:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+.paging_btn_main > .swiper-pagination-bullet-active:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/**************************************
+  swiper-bundle.css 수정한 부분
+    *** :root 색상 커스텀
+    22.   --swiper-theme-color: #fff;
+
+    *** .swiper-pagination 커스텀
+    342.  주석 처리
+    343.  top: 180px;
+    344.  left: 100px;
+
+    *** .swiper-pagination-bullet 커스텀
+    375.  width: 9px;
+    376.  height: 9px;
+    377.  display: inline-block;
+    378.  border: 2px solid var(--swiper-theme-color);
+    380.  transition: .3s;
+    
+    *** .swiper-pagination-bullet 호버 커스텀
+    383~386
+    .swiper-pagination-bullet:hover{
+      background: rgba(255, 255, 255, 0.4);
+      transform: scale(1.3);
+    }
+    387~389
+    .swiper-pagination-bullet-active:hover{
+      background: var(--swiper-theme-color);
+    }
+**************************************/

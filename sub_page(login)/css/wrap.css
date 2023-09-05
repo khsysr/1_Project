@@ -1,0 +1,378 @@
+/* wrap 전체 영역 */
+body {
+  overflow-x: hidden;
+}
+
+.wrap {
+  width: 1920px;
+  height: 1580px; /* 서브페이지 높이값 맞춤 */
+  display: flex;
+  margin: auto;
+}
+
+/* nav 전체 영역 */
+.nav_inner {
+  width: 558px;
+  height: 100%;
+}
+
+/* 네비 박스 */
+.nav_box {
+  width: 338px;
+  height: 3010px;
+  box-shadow: 15px 5px 10px rgba(0, 0, 0, 0.05);
+  position: fixed;
+  background-color: white;
+  z-index: 999;
+}
+
+/* 네비 이너 */
+.Lnav_inner {
+  height: 586px;
+  position: relative;
+}
+
+/* 로고 */
+.Lnav_inner .Lnav1 {
+  height: 124px;
+  padding: 30px;
+}
+.Lnav1 img a {
+  margin-top: 50px;
+}
+
+/* 로그인/검색 */
+.Lnav_inner .Lnav2 {
+  width: 170px;
+  height: 124px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+.Lnav2 .login,
+.Lnav2 .search {
+  width: 45px;
+  transition: 0.3s;
+}
+.Lnav2 .search p {
+  transition: 0.3s;
+}
+
+.Lnav2 .login:hover img,
+.Lnav2 .search:hover img {
+  opacity: 0;
+}
+.Lnav2 .login:hover {
+  background: url(../img/login_hover.png);
+}
+.Lnav2 .search:hover {
+  background: url(../img/search_hover.png);
+}
+.Lnav2 .login:hover,
+.Lnav2 .search:hover {
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+
+.Lnav2 .line {
+  width: 40px;
+  border: 1px solid #999595;
+  transform: rotate(90deg);
+}
+.Lnav2 .login:hover p,
+.Lnav2 .search:hover p {
+  color: var(--point_color);
+}
+
+/***************** 메뉴바 *****************/
+.Lnav_inner .Lnav3 {
+  height: 320px;
+  position: relative;
+}
+
+.Lnav_inner .Lnav3 .main_menu {
+  position: relative;
+}
+
+.Lnav_inner .Lnav3 ul {
+  text-align: center;
+  line-height: 3.5;
+}
+
+.Lnav_inner .Lnav3 > ul > li {
+  font-size: 18px;
+  width: 100%;
+  height: 64px;
+  transition: 0.3s;
+}
+
+.Lnav_inner .Lnav3 > ul > li > a {
+  display: block;
+}
+
+.Lnav_inner .Lnav3 > ul > li:hover {
+  background-color: #d3eed2;
+}
+
+/* 왼쪽 메인_서브메뉴 */
+.sub_menu {
+  position: absolute;
+  border-radius: 0 30px 30px 0;
+  background-color: #def6dd;
+  width: 200px;
+  height: fit-content;
+  left: 100%;
+  top: 0;
+  overflow: hidden;
+}
+
+.sub_menu a {
+  display: block;
+  transition: 0.3s;
+}
+.sub_menu a:hover {
+  background-color: #b0e9ae;
+  display: block;
+}
+
+.Lnav3 .sub_menu ul {
+}
+.Lnav3 .sub_menu ul > li > a {
+}
+
+/* 주민센터 이용시간 */
+.Lnav_inner .Lnav4 {
+  margin-top: 50px;
+  height: 286px;
+}
+.Lnav_inner .Lnav4 p {
+  padding: 10px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.Lnav_inner .Lnav4 img {
+  padding: 20px;
+  margin: 30px;
+  transform: translate(15%);
+}
+
+/* main_inner */
+.main_inner {
+  width: 1300px;
+  height: inherit;
+}
+
+/* main_header 영역 */
+.main_inner .main_header {
+  width: inherit;
+  height: 87px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main_header .header_logo {
+  padding: 25px;
+}
+
+.main_header .header_logo:hover {
+}
+.main_header .header_logo img {
+  width: 100px;
+}
+.main_header .header_text {
+  padding: 35px;
+}
+
+.main_header .header_text img {
+  width: 13px;
+}
+
+.main_header .header_text a:hover {
+  font-weight: 800;
+  text-decoration: underline;
+}
+.main_header .header_ul {
+  padding: 25px;
+}
+
+.main_header .header_ul ul {
+  display: flex;
+  justify-content: space-around;
+  width: 400px;
+  font-size: 16px;
+}
+.main_header .header_ul ul li {
+  padding: 10px;
+}
+
+.main_header .header_ul ul > li a:hover {
+  color: #a5e7a2;
+  font-weight: 800;
+  text-decoration: underline;
+}
+
+
+/* 메인_right */
+.main_right {
+  width: 62px;
+}
+.main_right_wrap {
+  position: relative;
+}
+/* 오른쪽 Rnav */
+.main_right_news {
+  border: 1px solid #fff;
+  box-shadow: -5px 10px 10px rgba(0, 0, 0, 0.25);
+  position: fixed;
+  border-radius: 30px 0 0 30px;
+  width: 60px;
+  height: 267px;
+  right: 0%;
+  top: 30%;
+  text-align: center;
+  line-height: 2;
+  z-index: 100;
+  background-color: #fff;
+}
+
+/* 오른쪽 픽스 1번째 호버 */
+.right_sub_menu {
+  background: url(../img/right_hover01.png) no-repeat;
+  position: absolute;
+  width: 150px;
+  height: 100px;
+  right: 0;
+  top: 10px;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.main_right_news a:hover > img {
+  opacity: 0;
+}
+.main_right_news a:hover .right_sub_menu {
+  animation: ani 1s;
+  opacity: 1;
+}
+
+/* 오른쪽 픽스 2번째 호버 */
+.right_sub_menu2 {
+  background: url(../img/right_hover02.png) no-repeat;
+  position: absolute;
+  width: 150px;
+  height: 100px;
+  right: 0;
+  top: 70px;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.main_right_news a:hover .right_sub_menu2 {
+  animation: ani 1s;
+  opacity: 1;
+}
+
+/* 오른쪽 픽스 3번째 호버 */
+.right_sub_menu3 {
+  background: url(../img/right_hover03.png) no-repeat;
+  position: absolute;
+  width: 150px;
+  height: 100px;
+  right: 0;
+  bottom: 25px;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.main_right_news a:hover .right_sub_menu3 {
+  animation: ani 1s;
+  opacity: 1;
+}
+
+/* 오른쪽 픽스 4번째 호버 */
+.right_sub_menu4 {
+  background: url(../img/right_hover04.png) no-repeat;
+  position: absolute;
+  width: 150px;
+  height: 100px;
+  right: 0;
+  bottom: -40px;
+  opacity: 0;
+  transition: 0.2s;
+}
+
+.main_right_news a:hover .right_sub_menu4 {
+  animation: ani 1s;
+  opacity: 1;
+}
+
+@keyframes ani {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translatex(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.main_right_news img {
+  margin-top: 8px;
+}
+
+/* 모바일 이용시간 */
+.timetable {
+  display: none;
+}
+.timetable b {
+  color: var(--orange_color);
+}
+
+/* 모바일 메뉴바 햄버거 */
+.trigger {
+  display: none;
+  width: 25px;
+  height: 20px;
+  position: absolute;
+  top: 50%;
+  right: 1.5rem;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.trigger span {
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 3px;
+  transition: 0.1s;
+}
+.trigger span:nth-child(1) {
+  top: 0;
+}
+.trigger span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+.trigger span:nth-child(3) {
+  bottom: 0;
+}
+
+/* .trigger.active */
+.trigger.active span:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+.trigger.active span:nth-child(2) {
+  opacity: 0;
+}
+.trigger.active span:nth-child(3) {
+  bottom: 50%;
+  transform: translateY(50%) rotate(-45deg);
+}

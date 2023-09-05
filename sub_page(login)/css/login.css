@@ -1,0 +1,428 @@
+.wrap {
+  height: 1580px;
+}
+
+/*************로그인 영역************************************************************** */
+
+.login_site {
+  width: 1300px;
+  height: inherit;
+}
+.login_00 {}
+
+.login_site .login_heading img{
+  width: 100%;
+  height: 100%;
+}
+
+.login_site .login_heading {
+  width: 100%;
+  height: 250px;
+  position: relative;
+  border-radius: 60px 0 0 0;
+  overflow: hidden;
+}
+
+.login_site h2 {
+  position: absolute;
+  top: 9rem;
+  left: 94px;
+  font-size: var(--sub_visual_title_size);
+  width: fit-content;
+  font-weight: 800;
+  color: white;
+  z-index: 1;
+}
+
+.login_site .login_heading h2:after {
+  content: "";
+  width: 100%;
+  height: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: var(--point_color);
+  border-radius: 5px;
+  z-index: -1;
+}
+
+.login_inner {
+  height: 50px;
+}
+
+.login_inner ul {
+  display: flex;
+  height: 50px;
+  background: #81dc7f;
+  justify-content: center;
+}
+.login_inner ul > li {
+  width: 177px;
+  text-align: center;
+  line-height: 3;
+  justify-content: center;
+  transition: .3s;
+}
+.login_inner ul > li a {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+}
+
+.login_inner .search {
+  background-color: white;
+}
+.login_inner .search a {
+  color: #81dc7f;
+}
+
+.login_inner ul > li:nth-child(1):hover,
+.login_inner ul > li:nth-child(3):hover,
+.login_inner ul > li:nth-child(4):hover{
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.login_text {
+  display: flex;
+  border-bottom: 1px solid rgba(221, 221, 221, 0.866667);
+  height: 61px;
+}
+
+.login_text p {
+  padding: 0 0.5rem;
+  height: 30px;
+  color: #b3b3b3;
+  margin-top: 20px;
+}
+
+/* 로그인 박스 */
+.login_box {
+  width: 1200px;
+  height: 500px;
+  margin: 80px auto 0;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+}
+
+/* 왼쪽 로그인 */
+.login_wrap {
+  width: 644px;
+  height: 500px;
+  position: relative;
+}
+
+/* middle_line */
+hr {
+  position: absolute;
+  left: 430px;
+  transform: rotate(90deg);
+  border: 1px solid #dddddd;
+  width: 443px;
+  margin-left: 10px;
+  bottom: 250px;
+}
+
+/* 왼쪽 첫번째 줄  */
+.login_wrap .login_1 h1 {
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 38px;
+}
+
+.mobile_heading {
+  display: none;
+}
+
+/* 왼쪽 두번째 줄  */
+.login_wrap .login_2 {
+  height: 280px;
+  margin-top: 70px;
+}
+
+.login_wrap .login_2 .login_id {
+  height: 80px;
+}
+
+.mobile_heading1 {
+  display: none;
+}
+
+/* 로그인 라벨 */
+.login_wrap .login_2 .login_id label,
+.login_wrap .login_2 .login_pass label {
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 23px;
+  line-height: 100%;
+  color: #000000;
+  text-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/*  로그인 아이디 */
+.login_wrap .login_2 .login_id #id {
+  width: 469px;
+  height: 60px;
+  left: calc(50% - 469px / 2 + 24.5px);
+  top: 591px;
+  background: #ffffff;
+  border: 1px solid #9e9e9e;
+  box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+/*  로그인 패스워드 */
+.login_wrap .login_2 .login_pass #password {
+  width: 469px;
+  height: 60px;
+  left: calc(50% - 469px / 2 + 24.5px);
+  top: 665px;
+  background: #ffffff;
+  border: 1px solid #9e9e9e;
+  box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.login_wrap .login_2 form {
+  padding: 2rem;
+}
+
+.login_wrap .login_2 .login_id,
+.login_wrap .login_2 .login_pass {
+  width: 97%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* 로그인 버튼 */
+.login_wrap .login_2 .btn_login {
+  margin-top: 20px;
+  background-color: #99e298;
+  width: 560px;
+  height: 74px;
+  box-shadow: 4px 4px 4px rgba(75, 201, 92, 0.25);
+  border-radius: 10px;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  /* position: relative; */
+}
+/* .btn_login a::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 300px;
+  left: -150px;
+  border: 5px solid #000;
+} */
+
+.btn_login a {
+  display: inline-block;
+  width: 100%;
+  line-height: 4;
+  height: 100%;
+}
+
+/* 버튼 호버 */
+.btn_login :hover {
+  background: #9dec9d;
+  border-radius: 10px;
+  text-decoration: underline;
+}
+
+/* sns 로그인  전체 틀*/
+.login_wrap2 {
+  margin-top: 35px;
+  height: 400px;
+  padding: 2rem;
+}
+/* sns 로그인 */
+.login_wrap2 .wrap2_heading h1 {
+  font-family: "Pretendard";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+  margin-bottom: 0.5rem;
+}
+
+/* sns로그인 logo  */
+.login_wrap2 .sns_logo {
+  height: 250px;
+}
+
+.login_wrap2 .sns_logo ul li {
+  margin-top: 15px;
+}
+
+/* sns 로그인 네이버 */
+.login_wrap2 .sns_logo ul .naver {
+  background-color: #00c300;
+  position: relative;
+  width: 404px;
+  height: 75px;
+  box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.login_wrap2 .sns_logo ul .naver img {
+  position: absolute;
+  bottom: 5px;
+  left: 15px;
+}
+.login_wrap2 .sns_logo ul .naver span {
+  font-size: 18px;
+  color: white;
+  width: 300px;
+  height: 60px;
+  padding: 1rem 0;
+  top: 10px;
+  left: 25%;
+  position: absolute;
+}
+
+/* sns 로그인 호버 애니메이션 효과 */
+.login_wrap2 .sns_logo ul li:hover {
+  box-shadow: 2px 4px 4px rgba(64, 226, 59, 0.25);
+  animation: ani 1s;
+}
+
+.login_wrap2 .sns_logo ul li:hover span {
+  text-decoration: underline;
+  font-weight: 900;
+}
+
+@keyframes ani {
+  0% {
+  }
+  50% {
+    transform: translateX(-50px);
+  }
+  100% {
+  }
+}
+
+/* sns google로그인 */
+.login_wrap2 .sns_logo ul .google {
+  background-color: #ffffff;
+  position: relative;
+  width: 404px;
+  height: 75px;
+  box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.login_wrap2 .sns_logo ul .google img {
+  position: absolute;
+  top: 20px;
+  left: 26px;
+}
+.login_wrap2 .sns_logo ul .google span {
+  font-size: 18px;
+  color: black;
+  width: 300px;
+  height: 60px;
+  padding: 1rem 0;
+  top: 10px;
+  left: 25%;
+  position: absolute;
+}
+
+/* sns 로그인 카카오 */
+.login_wrap2 .sns_logo ul .kakao {
+  background-color: #fee501;
+  position: relative;
+  width: 404px;
+  height: 75px;
+  box-shadow: 3px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+.login_wrap2 .sns_logo ul .kakao img {
+  position: absolute;
+  top: 15px;
+  left: 22px;
+}
+.login_wrap2 .sns_logo ul .kakao span {
+  font-size: 18px;
+  color: black;
+  width: 300px;
+  height: 60px;
+  padding: 1rem 0;
+  top: 15px;
+  left: 24%;
+  position: absolute;
+}
+
+/* 애니메이션 효과 줄 예정 */
+/* 아니면 이미지 빼고 직접 만들 예정 
+호버시 더 깔끔하게 하기 위해서 
+로고에 rel / 하위 abso 주고 부모에 오버플로우 히든
+::before 값으로 호버시 미끄럽게 사용
+ skew값 deg 주고 호버하면 left / top 해서 슬라이드
+ */
+
+/* 아이디 저장 */
+/* 왼쪽 세번째 줄  */
+.login_wrap .login_3 {
+  padding: 1rem 0;
+  color: #878787;
+  width: 550px;
+  margin-top: -20px;
+  margin-left: 40px;
+  filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.25));
+  position: relative;
+}
+/* 비회원 로그인 창 */
+.bd_login {
+  position: absolute;
+  right: 60px;
+  color: #878787;
+  bottom: 95px;
+  filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.25));
+  text-decoration: underline;
+}
+
+/* 로그인 마지막 /회원가입, 찾기 */
+.login_footer {
+  width: 1200px;
+  margin: auto;
+  height: 82px;
+  background-color: #f4f5f4;
+  border-radius: 15px;
+}
+.find_1,
+.find_2 {
+  display: flex;
+  font-size: 20px;
+  width: 500px;
+  margin: auto;
+  justify-content: space-around;
+  justify-content: center;
+  margin-top: 2%;
+}
+
+.find_1 a,
+.find_2 a {
+  color: #57cf55;
+  font-weight: 400;
+}
+
+.find_1 a:hover,
+.find_2 a:hover {
+  font-weight: 1000;
+  text-decoration: underline;
+}
+
+.iogin_find {
+  display: flex;
+}
+/* 오른쪽 로그인 */
+
+/****************************************************************************** */

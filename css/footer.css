@@ -1,0 +1,97 @@
+/* -- -- -- -- -- footer -- -- -- -- -- */
+footer {
+  width: 1920px;
+  margin: auto;
+  height: 326px;
+  background-color: #3b3b3b;
+  position: relative;
+}
+.footer_inner {
+  width: 1300px;
+  margin: auto;
+  padding-top: 60px;
+  padding-left: 80px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+/* footer 오른쪽 영역 */
+.footer_right ul {
+  display: flex;
+}
+
+/* 푸터 sns */
+.footer_right .sns-icon{
+  margin-bottom: 20px;
+}
+.footer_right .sns-icon li{
+  margin-right: 20px;
+  transition: .3s;
+}
+.footer_right .sns-icon li a{
+  width: 40px;
+  height: 40px;
+}
+
+.footer_right .multySite{
+  margin-bottom: 20px;
+}
+.footer_right .multySite li{
+  margin-right: 20px;
+}
+footer p, footer a{
+  color: white;
+}
+.footer_left{flex: 1;}
+.footer_right{flex: 2;}
+.footer_right p{
+  line-height: 2;
+}
+
+.footer_right .sns-icon li:nth-child(1):hover {
+  background: url(../img/sns-tistory_hover.png)no-repeat;
+}
+.footer_right .sns-icon li:nth-child(2):hover {
+  background: url(../img/sns-twitter_hover.png)no-repeat;
+}
+.footer_right .sns-icon li:nth-child(3):hover {
+  background: url(../img/sns-facebook_hover.png)no-repeat;
+}
+
+.footer_right .sns-icon li:hover img {
+  opacity: 0;
+}
+
+.footer_right .multySite {
+  margin-bottom: 20px;
+}
+
+.footer_right .multySite li {
+  margin-right: 20px;
+}
+.footer_right .multySite li:hover a {
+  text-decoration: underline;
+}
+
+
+/* footer 좌/우 이미지 */
+.footer_img01{
+  width:600px;
+  height:250px;
+  position: absolute;
+  bottom: 325px;
+  left: 350px;
+  background: url(../img/footer_Building_and_tree.svg) no-repeat;
+  background-size: cover;
+  z-index: 800;
+}
+.footer_img02{
+  width:650px;
+  height:400px;
+  position: absolute;
+  bottom: 250px;
+  right: 50px;
+  transform: scale(0.7);
+  background: url(../img/footer_Computing.svg) no-repeat;
+  background-size: cover;
+}

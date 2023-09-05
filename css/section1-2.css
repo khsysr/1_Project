@@ -1,0 +1,237 @@
+/**************** 섹션01 민원 서비스 .frequent_service ****************/
+/********************************
+.section_01
+  .frequent_service
+    a.service_menu.ser_fre
+      img
+      .text_box
+        h3.title
+        p
+    a.service_menu.ser_fre
+      ~~~~~ 위와 같은 구조
+    a.service_menu.ser_fre
+      ~~~~~ 위와 같은 구조
+    a.service_menu.ser_extra
+      img
+      .text_box
+        h3.title
+    a.service_menu.ser_extra
+      ~~~~~ 위와 같은 구조
+********************************/
+.section_01 {
+  width: inherit;
+  height: 451px;
+  padding: 0 1.25rem;
+}
+.frequent_service{
+  width: 100%;
+  height: 100%;
+  align-content: center;
+  grid-template-columns: repeat(3, 400px);
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas: 
+  '1 2 3'
+  '4 5';
+}
+.service_menu:nth-child(1){
+  grid-area: '1';
+}
+.service_menu:nth-child(2){
+  grid-area: '2';
+}
+.service_menu:nth-child(3){
+  grid-area: '3';
+}
+.service_menu:nth-child(4){
+  grid-area: '4';
+  margin-left: 10px;
+}
+.service_menu:nth-child(5){
+  grid-area: '5';
+  margin-left: 200px;
+}
+
+.service_menu:nth-child(1){background-color: var(--point_color);}
+.service_menu:nth-child(2){background-color: var(--orange_color);}
+.service_menu:nth-child(3){background-color: var(--blue_color);}
+.service_menu:nth-child(4){background-color: var(--olive_color);}
+.service_menu:nth-child(5){background-color: var(--skyblue_color);}
+
+
+/***** 섹션01 공통 *****/
+/* 서비스 메뉴 공통 스타일 */
+.service_menu{
+  display: flex;
+  border-radius: 30px;
+  color: #fff;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+  transition: .3s;
+  transition-timing-function: ease-in-out;
+}
+
+.ser_fre{
+  height: 180px;
+  padding: 2.5rem;
+  margin-bottom: 2.63rem;
+}
+.ser_extra{
+  width: 600px;
+  height: 100px;
+  align-items: center;
+  padding: 0.94rem 3.13rem;
+}
+.service_menu img{
+  width: 100px;
+  margin-right: 2rem;
+}
+.ser_extra img{
+  width: 70px;
+  margin-right: 3.88rem;
+}
+.service_menu .text_box .title{
+  margin: 0.5rem 0 0.8rem;
+}
+.service_menu .text_box p{
+  line-height: 1.25rem;
+}
+
+/* .service_menu 호버 */
+.service_menu:hover{
+  transform: translateY(-5px);
+  box-shadow: 2px 5px 8px rgba(0, 0, 0, 0.1);
+}
+.service_menu:hover >.text_box{
+  text-decoration: underline;
+  text-underline-position: under;
+}
+.service_menu:nth-child(1):hover{background-color: var(--point_color_hover);}
+.service_menu:nth-child(2):hover{background-color: var(--orange_color_hover);}
+.service_menu:nth-child(3):hover{background-color: var(--blue_color_hover);}
+.service_menu:nth-child(4):hover{background-color: var(--olive_color_hover);}
+.service_menu:nth-child(5):hover{background-color: var(--skyblue_color_hover);}
+
+
+/************** 섹션02 이런 서비스는 어떠세요? 슬라이드 **************/
+/********************************
+.section_02
+  .rec_heading
+    h3.title
+  .swiper.recommend_service
+    .swiper-wrapper
+      .swiper-slide.rec_slide
+        a.rec_ser
+          img
+          p
+      .swiper-slide.rec_slide
+        a.rec_ser
+          img
+      .swiper-slide.rec_slide
+        a.rec_ser
+          img
+          p
+    .swiper-button-next.rec_btn_next    
+    .swiper-button-prev.rec_btn_prev
+********************************/
+.section_02 {
+  width: inherit;
+  height: 457px;
+}
+.section_02 .recommend_service .swiper-wrapper{
+  height: 300px;
+}
+.rec_heading{
+  margin-top: 3rem;
+  text-align: center;
+}
+.swiper.recommend_service{
+  width: 1300px;
+  height: 387px;
+  padding: 2rem 5rem;
+  overflow: visible;
+}
+
+.rec_slide{
+  width: 320px;
+  height: 320px;
+  border-radius: 30px;
+}
+
+.rec_slide:nth-child(1){
+  background-color: var(--point_color);
+  box-shadow: 
+    2px 2px 5px rgba(0, 0, 0, 0.15),
+    inset -7px -7px 4px rgba(26, 126, 9, 0.25), 
+    inset 7px 7px 4px #E5FFD0;
+}
+.rec_slide:nth-child(2){
+  background-color: var(--blue_color);
+  box-shadow: 
+    2px 2px 5px rgba(0, 0, 0, 0.15),
+    inset -7px -7px 4px rgba(5, 79, 147, 0.25),
+    inset 7px 7px 4px #C7EBFF;
+}
+.rec_slide:nth-child(3){
+  background-color: var(--yellow_color);
+  box-shadow: 
+    2px 2px 5px rgba(0, 0, 0, 0.15),
+    inset -7px -7px 4px rgba(147, 107, 5, 0.25), 
+    inset 7px 7px 4px #FFF9C7;
+}
+.rec_ser{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+}
+.rec_ser img,
+.rec_ser p{
+  transition: .3s;
+  transition-timing-function: ease-in-out;
+}
+.rec_ser p{
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 1.25rem;
+}
+
+.rec_btn_next{
+  left: 1200px;
+  color: #444;
+}
+.rec_btn_prev{
+  left: 50px;
+  color: #444;
+}
+
+.swiper-slide.rec_slide.swiper-slide-visible{
+  overflow: hidden;
+}
+/* section_02 이런 서비스는 어떠세요? 슬라이드 이미지 스케일 효과 */
+.swiper-slide.rec_slide.swiper-slide-visible.swiper-slide-active img{
+  transform: scale(1.2);
+}
+.swiper-slide.rec_slide.swiper-slide-visible.swiper-slide-active p{
+  margin-top: 1.56rem;
+  font-size: 1.25rem;
+}
+
+/* section_02 슬라이드 그림자 수정  */
+.swiper-3d .swiper-slide-shadow-left {
+  background-image: linear-gradient(
+      to left, 
+      rgba(0, 0, 0, 0.35), 
+      rgba(0, 0, 0, 0) 30%
+    );
+}
+.swiper-3d .swiper-slide-shadow-right {
+  background-image: linear-gradient(
+      to right, 
+      rgba(0, 0, 0, 0.35), 
+      rgba(0, 0, 0, 0) 30%
+    );
+}

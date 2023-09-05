@@ -1,0 +1,79 @@
+/* https://noonnu.cc/font_page/694 'Pretendard' */
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root{
+  /* size */
+  --base_size: 1.13rem; /* 18px */
+  --title_size: 1.5rem; /* 24px */
+  --title_size2: 2rem; /* 32px */
+  --sub_visual_title_size: 3.25rem; /* 52px */
+  /* color */
+  --point_color: #81DC7F;
+  --point_color_hover: #5CCA5A;
+  --orange_color: #F6A55A;
+  --orange_color_hover: #f18b2b;
+  --blue_color: #62BAF9;
+  --blue_color_hover: #3ca5f0;
+  --olive_color: #CBD494;
+  --olive_color_hover: #b9c476;
+  --skyblue_color: #BBE1F1;
+  --skyblue_color_hover: #8ecce7;
+  --yellow_color: #FFD25C;
+}
+
+/********** reset **********/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Pretendard-Regular', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+ul, li{
+  list-style: none;
+}
+
+a{
+  color: #000;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-size: 100%;
+  font-weight: normal;
+}
+
+button{
+  font-family: 'Pretendard-Regular', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+input[type=text],
+input[type=password]{
+  font-family: inherit;
+}
+
+/********** common **********/
+.inner{
+  /* border: 1px solid red; */
+  width: 1300px;
+  margin: auto;
+}
+h3.title{
+  font-size: var(--title_size);
+  font-weight: 700;
+}
