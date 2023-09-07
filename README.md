@@ -1,3 +1,8 @@
+<a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fkhsysr%2F3_TeamProject&count_bg=%23000000&title_bg=%2334C9EE&icon=reverbnation.svg&icon_color=%23E7E7E7&title=Github&edge_flat=false"/></a>
+
+![header](https://capsule-render.vercel.app/api?type=waving&color=34C9EE&text=WEBSITE%20RENEWAL%20PROJECT%20&animation=twinkling&fontSize=18&fontAlignY=33&fontAlign=80&height=250&fontColor=d6ace6&desc=%20서대문구%20주민센터&descAlignY=55&descAlign=70&descSize=60&rotate=-6
+)
+
 - 배포 URL : https://khsysr.github.io/3_TeamProject/](https://khsysr.github.io/1_Project/
 - 기획서 URL : https://docs.google.com/presentation/d/1si2UPUVSYoXAg-GIhOOEpmwXsEbF6jaaquB5TQ36d9Q/edit?usp=sharing](https://docs.google.com/presentation/d/1c9yLYbfuwcR84i0Gdl9iQSnQEHnBS0EgW7_9vcdBF1o/edit
 - Figma URL : https://www.figma.com/file/XW6ku18pk6lRSt6GmcBVgO/3%EC%A1%B0-%ED%8C%80-%ED%94%84%EB[…]%B8?type=design&node-id=0%3A1&mode=design&t=e3c3yPb9M18gzu2y-1](https://www.figma.com/file/mytRyRn0JXkPUuo99unMOm/%ED%8C%80%ED%94%8C?type=whiteboard&node-id=0%3A1&t=EmPQhfaR50eJybni-1
